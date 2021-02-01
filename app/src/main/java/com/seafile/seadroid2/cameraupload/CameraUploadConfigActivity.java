@@ -19,7 +19,7 @@ import com.seafile.seadroid2.ui.fragment.SettingsFragment;
 import com.seafile.seadroid2.util.SystemSwitchUtils;
 import com.viewpagerindicator.LinePageIndicator;
 
-import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -30,7 +30,7 @@ public class CameraUploadConfigActivity extends BaseActivity {
 
     private ViewPager mViewPager;
     private LinePageIndicator mIndicator;
-//    private BucketsFragment mBucketsFragment;
+    private BucketsFragment mBucketsFragment;
     private CloudLibraryFragment mCloudLibFragment;
     private WhatToUploadFragment whatToUploadFragment;
     private SettingsManager sm;
@@ -108,7 +108,7 @@ public class CameraUploadConfigActivity extends BaseActivity {
             }
             // this is the only setting that is safed here. all other are returned to caller
             // and safed there...
-            settingsManager.setCameraUploadBucketList(new ArrayList<>());
+            settingsManager.setCameraUploadBucketList(selectedBuckets);
         }
 
         Intent intent = new Intent();
