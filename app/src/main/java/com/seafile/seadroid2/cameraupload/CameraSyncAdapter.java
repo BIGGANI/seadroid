@@ -416,7 +416,11 @@ public class CameraSyncAdapter extends AbstractThreadedSyncAdapter {
                 // create directories for media buckets
                 createDirectories(dataManager);
 
+<<<<<<< targetSdkV
                 iterateCursor(syncResult, dataManager, cursor, "images");
+=======
+                iterateCursor(syncResult, dataManager, cursor, MediaStore.Images.Media._ID);
+>>>>>>> master
 
                 if (isCancelled())
                     return;
@@ -475,7 +479,11 @@ public class CameraSyncAdapter extends AbstractThreadedSyncAdapter {
                 // create directories for media buckets
                 createDirectories(dataManager);
 
+<<<<<<< targetSdkV
                 iterateCursor(syncResult, dataManager, cursor, "video");
+=======
+                iterateCursor(syncResult, dataManager, cursor, MediaStore.Video.Media._ID);
+>>>>>>> master
 
                 if (isCancelled())
                     return;
